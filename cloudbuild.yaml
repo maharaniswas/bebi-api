@@ -20,6 +20,6 @@ steps:
       - "--region"
       - "asia-southeast2"
       - "--project"
-      - "	bebi-388306"
+      - "bebi-388306"
 options:
   logging: CLOUD_LOGGING_ONLY
