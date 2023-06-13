@@ -21,5 +21,6 @@ steps:
       - "asia-southeast2"
       - "--project"
       - "bebi-388306"
+      - "--allow-unauthenticated"  # Added line to allow unauthenticated access
 options:
   logging: CLOUD_LOGGING_ONLY
