@@ -6,7 +6,7 @@ steps:
       - "gcr.io/bebi-388306/bebi-api"
       - "."
   - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "gcr.io/	bebi-388306/bebi-api"]
+    args: ["push", "gcr.io/bebi-388306/bebi-api"]
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
     entrypoint: "gcloud"
     args:
