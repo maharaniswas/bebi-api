@@ -3,7 +3,7 @@ steps:
     args:
       - "build"
       - "-t"
-      - "gcr.io/	bebi-388306/bebi-api"
+      - "gcr.io/bebi-388306/bebi-api"
       - "."
   - name: "gcr.io/cloud-builders/docker"
     args: ["push", "gcr.io/	bebi-388306/bebi-api"]
@@ -14,7 +14,7 @@ steps:
       - "deploy"
       - "bebi-api"
       - "--image"
-      - "gcr.io/	bebi-388306/bebi-api"
+      - "gcr.io/bebi-388306/bebi-api"
       - "--platform"
       - "managed"
       - "--region"
