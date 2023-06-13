@@ -29,6 +29,8 @@ require('./app/routes/product.routes')(app);
 require('./app/routes/bundle.routes')(app);
 require('./app/routes/transaction.routes')(app);
 
-app.listen(8000, () => {
+const port = parseInt(process.env.PORT) || 8080;
+
+app.listen(port, () => {
     console.log("Server is running on port 8000.");
 });
