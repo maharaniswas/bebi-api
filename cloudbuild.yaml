@@ -1,0 +1,25 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      - "build"
+      - "-t"
+      - "gcr.io/	bebi-388306/bebi-api"
+      - "."
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/	bebi-388306/bebi-api"]
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: "gcloud"
+    args:
+      - "run"
+      - "deploy"
+      - "bebi-api"
+      - "--image"
+      - "gcr.io/	bebi-388306/bebi-api"
+      - "--platform"
+      - "managed"
+      - "--region"
+      - "asia-southeast2"
+      - "--project"
+      - "	bebi-388306"
+options:
+  logging: CLOUD_LOGGING_ONLY
